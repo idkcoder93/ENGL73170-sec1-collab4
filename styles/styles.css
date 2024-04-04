@@ -1,0 +1,169 @@
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.6;
+	margin: 0;
+	min-height: 100vh;
+}
+
+main {
+	padding: 10px 10px 10px 10px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+h2,
+h3,
+a {
+	color: #34495e;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+
+.logo {
+	margin: 0;
+	font-size: 1.45em;
+}
+
+.main-nav {
+	margin-top: 5px;
+
+}
+.logo a,
+.main-nav a {
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+}
+
+.main-nav a {
+	color: #34495e;
+	font-size: .99em;
+}
+
+.main-nav a:hover {
+	color: #718daa;
+}
+
+.header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	border: 1px solid #a2a2a2;
+	background-color: #f4f4f4;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.title-index {
+    text-align: center;
+}
+
+.text-container {
+	max-width: 800px;
+    margin: 0 auto; /* Center the container horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the text vertically */
+    text-align: center; /* Center the text horizontally */
+}
+
+.image-udp {
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+
+}
+
+.text-code {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
+
+.udp-header-container {
+	display: flex;
+    flex-direction: column; /* Set components to stack vertically */
+    justify-content: center;
+    align-items: center;
+}
+
+.udp-header-container img {
+	padding-top: 15px;
+}
+
+.reference-title {
+	text-align: center;
+}
+
+/* footer */
+.footer {
+    background-color: #f9f9f9;
+    padding: 10px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Changed from 'row' to 'column' */
+    align-items: center;
+}
+
+.footer-contact,
+.footer-bottom {
+    width: 100%; /* Ensure both elements take up full width */
+    text-align: center; /* Center the content horizontally */
+}
+
+.footer-contact p {
+    margin: 5px 0; /* Adjust margin as needed */
+}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+
+
+
+@media (min-width: 769px) {
+	.header,
+	.main-nav {
+		display: flex;
+        text-align: center;
+	}
+	.header {
+		flex-direction: flex-start;
+		align-items: center;
+    	.header{
+		width: 80%;
+		margin: 0 auto;
+		max-width: 1150px;
+	}
+	}
+
+}
+
+@media (min-width: 1025px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}

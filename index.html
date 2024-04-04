@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Networking</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/csharp.css">
+</head>
+<body>
+    <header class="header">
+		<h1 class="logo"><a href="#">My Network</a></h1>
+      <ul class="main-nav">
+          <li><a href="./index.html">UDP</a></li>
+          <li><a href="./TCP.html">TCP</a></li>
+      </ul>
+	</header> 
+    <main class="main-body">
+        <h1 class="title-index">Data Communication</h1>
+        <div class="text-container">
+            <p>Data communication is the epitome of how data is transferred from sending messages to presenting websites. In this section, we will be looking at how data is packaged and sent, examining different protocols that govern the very essence of data transmission across the vast platform we call the internet. We will go over the different protocols and walk through some code that orchestrates this delivery.</p>
+        </div>
+        <h1 class="title-index">UDP protocols</h1>
+        <h2 class="text-container">What is it?</h2>
+        <div class="text-container">
+            <p>UDP stands for User Datagram Protocol and is ultimately a connectionless protocol that sends out a message to an endpoint, which could be another device. The required parameters we need in order to send data are an IP address and an unused port number. An <i>IP address</i> is just a 32-bit virtual address where your device resides. The <i>Port Number</i> is just an access point that allows your device to access. Think of it like a channel on a TV. If the <i>Port Number</i> is different, then the packet will be dropped and lost forever.</p>
+        </div>
+        <img src="./images/UDP.jpg" alt="udp_image" class="image-udp">
+        <div class="code-section">
+            <h1 class="title-index">Coding time...</h1>
+            <pre class="cscode"><code>                udpClnt = <span class="key">new</span> UdpClient();
+                <span class="key">byte</span>[] sendBytes = Encoding.ASCII.GetBytes(message);
+                udpClnt.Client.Bind(<span class="key">new</span> IPEndPoint(IPAddress.Any, sendPortMessage));
+                udpClnt.Send(sendBytes, sendBytes.Length, ipAddress, sendPortMessage);</code></pre>
+            <p class="text-container">Above is an example of how to initialize a UDP socket, which in C# is very easy and can be done with the System.Net library. As UDP needs to know its destination, such as an IP address and a port number, it will have to bind this information to it and send it right away. There is no need for a three-way handshake or confirmation with the end device. Therefore, reliability is out the window. As it is connectionless, it will not detect the other device before sending. This form of transportation or protocol is not optimal for crucial data like images, user credentials, and so on.</p>
+        </div>
+        <div class="udp-header-container">
+            <img src="./images/udp-protocol.png" alt="udp-header">
+            <p class="text-container">Compared to its counterpart, this connectionless protocol only requires the bare bones of information. The IP address of the intended destiation and its own, length of the data or payload, and the error detection algorithm which in this case is checksum. </p>
+        </div>
+        <div class="references">
+            <h2 class="reference-title">References</h2>
+            <p style="text-align: center;">[1]“UDP Protocol | User Datagram Protocol - javatpoint,” www.javatpoint.com. https://www.javatpoint.com/udp-protocol <br>[2]“Communication Networks/TCP and UDP Protocols - Wikibooks, open books for an open world.” https://en.wikibooks.org/wiki/Communication_Networks/TCP_and_UDP_Protocols</p>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-contact">
+                <p>Contact Us:</p>
+                <p>Email: info@example.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Networking. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
