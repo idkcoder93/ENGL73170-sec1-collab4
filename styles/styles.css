@@ -1,176 +1,143 @@
-
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 body {
-	font-family: 'Montserrat', sans-serif;
-	line-height: 1.6;
-	margin: 0;
-	min-height: 100vh;
-}
-
-main {
-	padding: 10px 10px 10px 10px;
-}
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-
-h2,
-h3,
-a {
-	color: #34495e;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    min-height: 100vh;
+    background: #f0f4f8; /* Light gray background */
+    color: #333; /* Darker text for better contrast */
 }
 
 a {
-	text-decoration: none;
+    color: #106ba3; /* Blue color for links */
+    text-decoration: none;
 }
 
+a:hover {
+    color: #ff7f50; /* Coral color on hover */
+    text-decoration: underline;
+}
 
+/* Header */
+.header {
+    padding: 1em 0;
+    background: linear-gradient(to right, #1e5799 0%, #2989d8 50%, #207cca 75%, #7db9e8 100%); /* Blue gradient */
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
-.logo {
-	margin: 0;
-	font-size: 1.45em;
+.logo a {
+    font-weight: bold;
+    font-size: 1.75em;
+    color: white; /* Ensures logo text is visible */
 }
 
 .main-nav {
-	margin-top: 5px;
-
-}
-.logo a,
-.main-nav a {
-	padding: 10px 15px;
-	text-transform: uppercase;
-	text-align: center;
-	display: block;
+    display: flex;
+    justify-content: space-around;
 }
 
 .main-nav a {
-	color: #34495e;
-	font-size: .99em;
+    padding: .5em 1em;
+    text-transform: uppercase;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    color: white; /* Ensures nav link text is visible */
+    margin: 0 10px; /* Adds spacing between navigation items */
 }
 
 .main-nav a:hover {
-	color: #718daa;
+    background-color: #ff7f50; /* Coral background on hover */
+    color: white;
 }
 
-.header {
-	padding-top: .5em;
-	padding-bottom: .5em;
-	border: 1px solid #a2a2a2;
-	background-color: #f4f4f4;
-	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+/* Main content */
+main {
+    padding: 2em;
 }
 
 .title-index {
-    text-align: center;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #106ba3; /* Blue color for titles */
+    text-align: center; /* Centers titles */
 }
 
 .text-container {
-	max-width: 800px;
-    margin: 0 auto; /* Center the container horizontally */
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center the text vertically */
-    text-align: center; /* Center the text horizontally */
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1em;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px; /* Rounded corners for containers */
+    text-align: center; /* Centers text inside containers */
 }
 
-.image-udp {
-    width: 100px;
+.image-udp, .http-image, .tcp-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for images */
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-
-}
-
-.text-code {
-    display: flex;
-    justify-content: center;
-    text-align: left;
-}
-
-.udp-header-container {
-	display: flex;
-    flex-direction: column; /* Set components to stack vertically */
-    justify-content: center;
-    align-items: center;
+    margin: 20px auto; /* Adds top and bottom margin and centers horizontally */
 }
 
 .udp-header-container img {
-	padding: 100px 0px 100px 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%; /* Adjust this as needed to fit your design */
 }
 
-.tcp-image {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 50%;
+/* Code snippets */
+pre.cscode {
+    background-color: #282c34; /* Dark background for code */
+    color: #abb2bf; /* Light gray text color for code */
+}
+
+.cscode .key {
+    color: #c678dd; /* Purple for keywords */
+}
+
+.cscode .str {
+    color: #98c379; /* Green for strings */
 }
 
 .reference-title {
-	text-align: center;
+    text-align: center;
+    font-size: 1.5em; /* Example font size, adjust as needed */
+    margin-top: 2em; /* Adds space above the title */
 }
 
-/* footer */
+/* Footer */
 .footer {
-    background-color: #f9f9f9;
-    padding: 10px 0;
+    background-color: #1e2a36; /* Dark blue background */
+    color: white;
+    padding: 2em 0;
+    text-align: center; /* Ensures footer text is centered */
 }
 
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column; /* Changed from 'row' to 'column' */
-    align-items: center;
+    text-align: center;
 }
 
-.footer-contact,
-.footer-bottom {
-    width: 100%; /* Ensure both elements take up full width */
-    text-align: center; /* Center the content horizontally */
+.footer-contact p, .footer-bottom {
+    margin: 0.5em 0;
 }
 
-.footer-contact p {
-    margin: 5px 0; /* Adjust margin as needed */
-}
-
-
-/* ================================= 
-  Media Queries
-==================================== */
-
-
-
-
+/* Responsive design adjustments */
 @media (min-width: 769px) {
-	.header,
-	.main-nav {
-		display: flex;
-        text-align: center;
-	}
-	.header {
-		flex-direction: flex-start;
-		align-items: center;
-    	.header{
-		width: 80%;
-		margin: 0 auto;
-		max-width: 1150px;
-	}
-	}
+    .header,
+    .main-nav {
+        flex-direction: row;
+        align-items: center;
+    }
 
-}
-
-@media (min-width: 1025px) {
-	.header {
-		flex-direction: row;
-		justify-content: space-between;
-	}
-
+    .main-nav {
+        margin-left: auto;
+    }
 }
