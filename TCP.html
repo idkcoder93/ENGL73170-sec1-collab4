@@ -2,6 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/csharp.css">
     <title>Networking</title>
 </head>
 <body>
@@ -13,7 +15,33 @@
       </ul>
 	</header> 
     <main>
-        
+        <h1 class="title-index">TCP</h1>
+        <div class="">
+            <p class="text-container"></p>
+        </div>
+        <img class="tcp-image" src="images/TCP_handshake.jpeg" alt="TCP-handshake">
+        <pre class="cscode"><code><span class="key">var</span> ipEndPoint = <span class="key">new</span> IPEndPoint(IPAddress.Any, 13);
+            TcpListener listener = <span class="key">new</span>(ipEndPoint);
+            
+            <span class="key">try</span>
+            {    
+                listener.Start();
+            
+                <span class="key">using</span> TcpClient handler = <span class="key">await</span> listener.AcceptTcpClientAsync();
+                <span class="key">await</span> <span class="key">using</span> NetworkStream stream = handler.GetStream();
+            
+                <span class="key">var</span> message = $<span class="str">"📅 {DateTime.Now} 🕛"</span>;
+                <span class="key">var</span> dateTimeBytes = Encoding.UTF8.GetBytes(message);
+                <span class="key">await</span> stream.WriteAsync(dateTimeBytes);
+            
+                Console.WriteLine($<span class="str">"Sent message: \"{message}\""</span>);
+                <span class="com">// Sample output:</span>
+                <span class="com">//     Sent message: "📅 8/22/2022 9:07:17 AM 🕛"</span>
+            }
+            <span class="key">finally</span>
+            {
+                listener.Stop();
+            }</code></pre>
     </main>
     
 </body>

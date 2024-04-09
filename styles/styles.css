@@ -103,7 +103,14 @@ a {
 }
 
 .udp-header-container img {
-	padding-top: 15px;
+	padding: 100px 0px 100px 80px;
+}
+
+.tcp-image {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
 }
 
 .reference-title {
