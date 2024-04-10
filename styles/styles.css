@@ -23,21 +23,29 @@ a:hover {
 
 /* Header */
 .header {
-    padding: 1em 0;
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+    padding: .7em .5em 0 0.5em;
     background: linear-gradient(to right, #1e5799 0%, #2989d8 50%, #207cca 75%, #7db9e8 100%); /* Blue gradient */
-    color: white;
+    color: rgb(239, 185, 185);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .logo a {
     font-weight: bold;
-    font-size: 1.75em;
+    font-size: 1.5em;
     color: white; /* Ensures logo text is visible */
 }
 
 .main-nav {
     display: flex;
     justify-content: space-around;
+	align-items: center;
+}
+
+.main-nav li {
+	list-style: none;
 }
 
 .main-nav a {

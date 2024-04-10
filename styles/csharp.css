@@ -1,5 +1,18 @@
-pre.cscode {margin:0em; overflow:auto; background-color:#ffffff; display:flex; justify-content:center;padding-bottom: 20px;}
-.cscode code {font-family:Consolas,"Courier New",Courier,Monospace; font-size:10pt; color:#000000; margin-bottom: 30px;}
+pre.cscode {
+    margin:0em; 
+    overflow:auto; 
+    background-color:#f0f4f8; 
+    display:flex; 
+    justify-content:center;
+    padding-bottom: 20px;
+}
+.cscode code {
+    font-family:Consolas,"Courier New",Courier,Monospace; 
+    font-size:10pt; 
+    color:#000000; 
+    margin-bottom: 30px;
+    /* border-style: solid; */
+}
 .cscode .key {color:#0000ff;}
 .cscode .com {color:#008000;}
 .cscode .str {color:#a31515;}

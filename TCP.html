@@ -21,7 +21,16 @@
         <p>Transmission Control Protocol (TCP) is one of the main protocols of the Internet Protocol Suite. It is designed to provide a reliable, ordered, and error-	checked delivery of a stream of bytes between applications running on hosts communicating over an IP network. Fundamental to the design of TCP is the establishment 	of a bi-directional communication channel that ensures data integrity through acknowledgments and retransmissions. This protocol facilitates the internet's core 	functions such as browsing, email, and file transfer, ensuring that data sent and received is consistent and accurate.</p>
     </div>
     <img class="tcp-image" src="images/TCP_handshake.jpeg" alt="TCP-handshake">
-        <pre class="cscode"><code><span class="key">var</span> ipEndPoint = <span class="key">new</span> IPEndPoint(IPAddress.Any, 13);
+    <div class="text-container">
+        <p>To initiate a TCP connection you have to first have a starter procedure called the three-way handshake.
+        This confirms that both end-users are available to communicate by sending something flags which you see
+        at the above image. There is a SYN flag, which means it sychronizes with the intended end-user and than a
+        The ACK flag is the acknowledgment indicator that the receiving end has gotten there message and acknowledes
+        that they're ready for communication. The server or initiator than sends back an acknowledgement. We will not
+        get into the whole number sequences you see at the images it will be a subject on its own.</p>
+    </div>  
+    <h1 class="title-index">Coding...</h1> 
+    <pre class="cscode"><code><span class="key">            var</span> ipEndPoint = <span class="key">new</span> IPEndPoint(IPAddress.Any, 13);
             TcpListener listener = <span class="key">new</span>(ipEndPoint);
             
             <span class="key">try</span>
@@ -43,6 +52,19 @@
             {
                 listener.Stop();
             }</code></pre>
+    <div class="text-container">
+        <p>The code you see above demonstrates a simple TCP connection where the initiate the three-way
+            handshake by calling the <i>TcpListener</i> and giving it the IP endpoint as an argument.
+            The listener awaits for the connection and receives a confirmation from the receiver. After
+            it generate the currwent date and encodes this into bytes. Than it sends this information 
+            as well as consoles the data.
+        </p>
+    </div>
+    <div class="references">
+        <h2 class="title-index">References</h2>
+        <p style="text-align: center;">[1]A. I. T. A. (AITA) info @adroitacademy.com, “| Blog,” Adroit Information Technology Academy (AITA). https://www.adroitacademy.com/blog/Sequence-of-TCP-Connection (accessed Apr. 10, 2024).
+            ‌<br>[2]“Communication Networks/TCP and UDP Protocols - Wikibooks, open books for an open world.” https://en.wikibooks.org/wiki/Communication_Networks/TCP_and_UDP_Protocols</p>
+    </div>
     </main>
     <footer class="footer">
         <div class="footer-content">
